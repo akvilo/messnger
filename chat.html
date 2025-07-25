@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+        <title>Messenger | Chat</title>
+        <link rel="stylesheet" href="styles/chat.css">
+        <link rel="icon" href="/icon/avatar.svg">
+        <script src="script/script.js" type="module" defer></script>
+    </head>
+    <body class = "light">
+        <section class="top-bar">
+            <div class="settings">
+                <buttons class="settings__button">
+                <img 
+                    src="icon/favorite-btn.png" 
+                    alt="favorite"
+                >
+                </buttons>
+                <buttons class="settings__button">    
+                <img 
+                    src="icon/contacts-btn.png"
+                    alt="contacts"
+                >
+                </buttons>
+                <buttons class="settings__button settings__button-theme">
+                <img 
+                    src="icon/theme-btn.png"
+                    alt="change theme"
+                >
+                </buttons>
+                <buttons class="settings__button">
+                <img 
+                    src="icon/adv-settings-btn.png"
+                    alt="advanced settings"
+                >
+                </buttons>
+            </div>
+            <div class="chat-info">
+                <div class="chat-info__interlocutor">
+                    <div class="chat-info__interlocutor-left">
+                    <img 
+                    src="icon/avatar.svg" 
+                    alt="interlocutor photo" 
+                    class="chat-info__interlocutor-icon"
+                    >
+                    </div>
+                    <div class="chat-info__interlocutor-right">
+                        <span class="chat-info__interlocutor-name">Злата Машаева</span>
+                    <div class="chat-info__interlocutor-status offline">Был(а) в сети</div>
+                    </div>
+                </div>
+                <div class="chat-info__buttons">
+                    <button class="chat-info__buttons-call">
+                        <img 
+                        src="icon/phone-icon.svg"
+                        alt="call icon"
+                        >
+                    </button>
+                    <button class="chat-info__buttons-video">
+                        <img 
+                        src="icon/video-icon.svg"
+                        alt="video-call icon"
+                        >
+                    </button>
+                    <button class="chat-info__buttons-find">
+                        <img 
+                        src="icon/find-icon.svg"
+                        alt="find icon"
+                        >
+                    </button>
+                    <button class="chat-info__buttons-more">
+                        <img 
+                        src="icon/dots.svg"
+                        alt="call icon"
+                        >
+                    </button>
+                </div>
+                <div class="chat-info__notification">
+                    <button class="chat-info__notification-button">
+                        <img
+                        src="/icon/notification.svg" 
+                        alt="notification">
+                    </button>
+                </div>
+
+            </div>
+        </section>
+        <div class="notification">
+            <span class = "notification__header-text">Уведомления
+                <button class="notification__out">>></button>
+            </span>
+            <div class="notification__list">
+                <div class="notification__message">
+                    <div class="notification__message-avatar">
+                        <img 
+                        class = "notification-avatar"
+                        src="image/photo_2024-11-23_00-24-52.jpg" 
+                        alt="avatar"
+                        >
+                    </div>
+                    <div class="notification__message-side-info">
+                        <span class="notification__message-text"><strong>@user123</strong> somebody text</span>
+                        <span class="notification__message-time">13:37</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="main">
+            <div class="left-side">
+                <div class="chats">
+                    <div class="chats-header">
+                        <h1 style="font-weight: 700;">Чаты</h1>
+                        <div  class="chats-header__add-new-chat">
+                            <button class = "chats-header__new-chat-btn">
+                                <img 
+                                src="image/add-new-chat.svg" 
+                                alt="new chat"
+                                >
+                            </button>
+                            <div class="chats-header__panel-new-chat">
+                                <div class="chats-header__panel-tab" data-id = '1'>
+                                    <img 
+                                    src="icon/user.png"
+                                    alt="create"
+                                    >
+                                    <span>Создать личный чат</span>
+                                </div>
+                                <div class="chats-header__panel-tab" data-id = '2'>
+                                    <img 
+                                    src="icon/group.png"
+                                    alt="create group"
+                                    >
+                                    <span>Создать группу</span>
+                                </div>
+                                <div class="chats-header__panel-tab" data-id = '3'>
+                                    <img 
+                                    src="icon/megaphone.png"
+                                    alt="create channel"
+                                    >
+                                    <span>Создать канал</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class = "chats__panel">
+                        <li>Все</li>
+                        <li>Приватные</li>
+                        <li>Общие</li>
+                        <span>Ещё</span>
+                    </ul>
+                    <input
+                    class="chats__find"
+                    type="text"
+                    placeholder="Поиск людей и каналов"
+                    >
+                    <div class = "chats__list">
+                    </div>
+                </div>
+                <div class="create-group">
+                    <button class = "left-panel__back">
+                        <img 
+                        src="image/arrow.png" 
+                        alt="button back"
+                        >
+                    </button>
+                    <div class="create-group__set-avatar">
+                        <span>Создать группу</span>
+                        <div class="create-group__set-avatar-circle">
+                            <input class = "create-group__load-avatar" type="file" accept="photo">
+                            <img 
+                            class = "create-group__avatar"
+                            src="image/add-image.png" 
+                            alt="Set grpup avatar"
+                            >
+                        </div>
+                    </div>
+                        <input 
+                        class = "create-group__input"
+                        id = "createGroupName"
+                        placeholder="Имя канала"
+                        type="text"
+                        >
+                        <input 
+                        class = "create-group__input"
+                        id = "createGroupDescription"
+                        placeholder="Описание (необязательно)"
+                        type="text"
+                        >
+                    <button class = "left-panel__continue" id = "createGroupContinue">
+                        <img src="image/arrow white.png" alt="continue">
+                    </button>
+                </div>
+            </div>
+            <div class="inactive-chat">
+                <span class = "inactive-chat__text">Выберите любой чат 🐹</span>
+            </div>
+            <div class="chat">
+                <div class="chat__messages">
+                    <div class="chat__messages-interlocutor"></div>
+                    <div class="chat__messages-user"></div>
+                </div>
+                <div class="chat__panel">
+                    <button class = "chat__panel-add-file">
+                        <img
+                        src="icon/paper-clip.svg" 
+                        alt="add files"
+                        >
+                    </button>
+                    <textarea 
+                    class = "chat__panel-input"
+                    rows="8" 
+                    cols="0"
+                    placeholder="Введите сообщение..."
+                    >
+                    </textarea>
+                    <button class="chat__panel-voice-msg">
+                        <img 
+                        src="icon/mic.png"
+                        alt="voice message"
+                        >
+                    </button>
+                    <button class="chat__panel-send-msg">
+                        <img
+                        src="icon/send.png" 
+                        alt="send message"
+                        >
+                    </button>
+                </div>
+            </div>
+        </section>
+        <script src = "script/chats.js"></script>
+        <script src = "script/chat-msg.js"></script>
+    </body>
+</html>

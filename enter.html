@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+        <title>Messenger | Login</title>
+        <link rel="stylesheet" href="styles/enter.css">
+        <script src="script/script.js" type="module" defer></script>
+    </head>
+    <body>
+        <section class = "login">
+            <div class="login-socials">
+                <div class="login-socials__header">
+                    <img 
+                    src="image/Geekbrains_logo1.svg" 
+                    alt="logo_icon"
+                    >
+                    <h1 class = "login-socials__header-text">I-Messenger</h1>
+                </div>
+                    <div class="login-socials-enter">
+                        <span class = "login-socials-enter__text">Вход через соц.сети</span>
+                        <div class = "login-socials-enter__buttons">
+                            <button class = "login-socials-enter__button">
+                                <img 
+                                src="/icon/vk-icon 1.svg" 
+                                alt="login VK"
+                                >
+                            </button>
+                            <button class = "login-socials-enter__button">
+                                <img 
+                                src="/icon/google-icon.svg" 
+                                alt="login Google"
+                                > 
+                            </button>
+                            <button class = "login-socials-enter__button">
+                                <img 
+                                src="/icon/mail-ru-icon.svg" 
+                                alt="login Email"
+                                >
+                            </button>
+                        </div>
+                        <span class = "login-socials-enter__text">или Email</span>
+                    </div>
+            </div>
+            <div class="login-enter">
+                <div class="login-enter__user-data registration-data">
+                    <span>Имя</span>
+                    <input
+                    id = "userInputName"
+                    class = "login-center__user-data-input"
+                    type="text"
+                    placeholder="Имя"
+                    >
+                </div>
+                <div class="login-enter__user-data registration-data">
+                    <span>Фамилия</span>
+                    <input
+                    id = "userInputSurname"
+                    class = "login-center__user-data-input"
+                    type="text"
+                    placeholder="Фамилия"
+                    >
+                </div>
+                <div class="login-enter__user-data registration-data">
+                    <span>Возраст</span>
+                    <input
+                    id = "userInputAge"
+                    class = "login-center__user-data-input"
+                    type="age"
+                    placeholder="Возраст"
+                    >
+                </div>
+                <div class="login-enter__user-data active">
+                    <span>Email</span>
+                    <input 
+                    class = "login-center__user-data-input"
+                    id = "userInputMail"
+                    type="email" 
+                    placeholder="Электронная почта"
+                    >
+                </div>
+                <div class="login-enter__user-data active">
+                    <span>Пароль</span>
+                    <input
+                    id = "userInputPassword"
+                    class = "login-center__user-data-input"
+                    type="password"
+                    placeholder="Пароль"
+                    >
+                </div>
+                <div class="login-enter__user-buttons">
+                    <div style="display: flex; gap: 250px">
+                        <button 
+                        class = "login-enter__user-buttons-button login-enter__user-buttons-button-remember"
+                        id ="btnRememberMe">
+                        Запомнить меня
+                        </button>
+                        <button class = "login-enter__user-buttons-button" style="font-weight: 600;">Войти по  смс</button>
+                    </div>
+                    <button 
+                    class = "login-enter__user-buttons-button-enter"
+                    id = "buttonEnter">Войти</button>
+                    <div class = "login-enter__user-buttons-footer">
+                        <button class = "login-enter__user-buttons-button">Забыли пароль?</button>
+                        <button 
+                        class = "login-enter__user-buttons-button"
+                        id = "buttonRegistration">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src = "script/enter.js"></script>
+    </body> 
+</html>
